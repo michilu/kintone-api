@@ -1,0 +1,30 @@
+autobind:
+- github.com/michilu/proto-api/graph/model
+exec:
+  filename: exec.go
+  package: generated
+model:
+  filename: models.go
+  package: model
+models:
+  Code:
+    model:
+    - google.golang.org/genproto/googleapis/rpc/code.Code
+  ExampleServiceQueryRequestInput:
+    model:
+    - pb/proto/v1.ExampleServiceQueryRequest
+  ExampleServiceQueryResponse:
+    model:
+    - pb/proto/v1.ExampleServiceQueryResponse
+  HealthCheckServiceHealthCheckResponse:
+    model:
+    - pb/proto/v1.HealthCheckServiceHealthCheckResponse
+  Response:
+    model:
+    - pb/proto/v1.Response
+resolver:
+  dir: graph
+  layout: follow-schema
+  package: graph
+schema:
+- helthcheck.pb.graphqls
