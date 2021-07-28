@@ -15,6 +15,6 @@ clean:
 .venv:
 	poetry install
 
-openapi-client/% :apidocs.swagger.yaml
+openapi-client/% :openapi.yaml
 	docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli:$(OPENAPI_GENERATOR_CLI_VERSION) generate -i /local/$< -g $(shell basename $$(dirname $@)) -o /local/$(shell dirname $@)
 	touch $@
